@@ -36,7 +36,7 @@
 #include "Arduino.h"
 #include "esp32-hal.h"
 
-#define eye_center 1350
+#define eye_center 1500
 #define servo_min 750
 #define servo_max 2100
 #define delay_time 20

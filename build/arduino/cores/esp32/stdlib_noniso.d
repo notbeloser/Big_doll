@@ -1,5 +1,5 @@
 cores/esp32/stdlib_noniso.o: \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/stdlib_noniso.c \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -21,7 +21,7 @@ cores/esp32/stdlib_noniso.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/math.h \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/stdlib_noniso.h
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -65,4 +65,4 @@ cores/esp32/stdlib_noniso.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/math.h:
 
-/home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/stdlib_noniso.h:
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h:

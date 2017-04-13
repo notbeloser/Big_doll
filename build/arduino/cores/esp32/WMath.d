@@ -1,5 +1,5 @@
 cores/esp32/WMath.o: \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/WMath.cpp \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/WMath.cpp \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h \

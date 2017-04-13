@@ -1,6 +1,6 @@
 cores/esp32/WString.o: \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/WString.cpp \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/WString.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/WString.cpp \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/WString.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -20,10 +20,10 @@ cores/esp32/WString.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/string.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/ctype.h \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/pgmspace.h \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/stdlib_noniso.h
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/pgmspace.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h
 
-/home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/WString.h:
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/WString.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -63,6 +63,6 @@ cores/esp32/WString.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/ctype.h:
 
-/home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/pgmspace.h:
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/pgmspace.h:
 
-/home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/stdlib_noniso.h:
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h:

@@ -111,12 +111,14 @@ void bow_init(bow_d bow)
 void eye_set(eye_d eye){
 	double x,y;
 
-	y=-eye.r*sin(radians(eye.angle))+eye_center;
+
 	if(eye.rev){
-		x=-eye.r*cos(radians(eye.angle))+eye_center;
+		x=eye.r*cos(radians(eye.angle))+1300;
+		y=(eye.r)*sin(radians(eye.angle))+eye_center;
 	}
 	else{
-		x=eye.r*cos(radians(eye.angle))+eye_center;
+		x=eye.r*cos(radians(eye.angle))+1450;
+		y=(-eye.r)*sin(radians(eye.angle))+eye_center;
 	}
 	ledcWrite(eye.channel_y,(int)(y*0.8192));
 	ledcWrite(eye.channel_x,(int)(x*0.8192));
@@ -140,21 +142,17 @@ void ear_set(ear_d e){
 }
 
 void bow_set(bow_d b){
-	const double l = 12.59;//length of servo stick
-	const double lowest_deg = 39;
-	const double low_height_lowest = l*tan(radians(lowest_deg));
-	double height= b.y +low_height_lowest;
-	double rad = atan2(height,l);
-	double angle_move = degrees(rad) - lowest_deg;
-	int duty;
+	int angle_duty,duty=0;
+
 	if(b.rev){
-		duty = (servo_max - 92/9 * angle_move) * 0.8192;
+		duty=(1500-b.y*50/3)*0.8192;
+		angle_duty=(b.angle*50/3+1500)*0.8192;
 	}
 	else{
-		duty = (92/9 * angle_move + servo_min) * 0.8192;
+		duty=(b.y*50/3+1500-60)*0.8192;
+		angle_duty=(1500-(b.angle-6)*50/3)*0.8192;
 	}
 	ledcWrite(b.channel_y,duty);
-	int angle_duty = (1430 + 92/9 * b.angle)*0.8192;
 	ledcWrite(b.channel_angle,angle_duty);
 }
 

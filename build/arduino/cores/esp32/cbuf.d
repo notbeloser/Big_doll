@@ -1,6 +1,6 @@
 cores/esp32/cbuf.o: \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/cbuf.cpp \
- /home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/cbuf.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/cbuf.cpp \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/cbuf.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -19,7 +19,7 @@ cores/esp32/cbuf.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h
 
-/home/notbeloser/esp/Doll_ESP32/components/arduino/cores/esp32/cbuf.h:
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/cbuf.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
 
