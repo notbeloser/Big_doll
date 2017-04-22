@@ -6,20 +6,33 @@ const int joy_y=15;
 int sw_state; 
 int joy_x_value,joy_y_value;
 char s[100];
+char c;
+bool start=true;
 void setup() {
   for(int i=0;i<4;i++){
     pinMode(sw[i],INPUT_PULLUP);
   }
   pinMode(joy_sw,INPUT_PULLUP);
-  Serial.begin(115200);
+  Serial.begin(38400);
 }
 
 void loop() {
-  sw_state= (!digitalRead(joy_sw)<<4)|(!digitalRead(sw[3])<<3)|(!digitalRead(sw[2])<<2)|(!digitalRead(sw[1])<<1)|(!digitalRead(sw[0]));
-  joy_x_value=analogRead(joy_x);
-  joy_y_value=analogRead(joy_y);
-  sprintf(s,"%d,%d,%d\n",sw_state,joy_x_value,joy_y_value);
-  Serial.print(s);
-  memset(s,0,sizeof(s));
-  delay(50);
+//  while(Serial.available()){
+//    c=Serial.read();
+//    if(c == 'A'){
+//      start=true;
+//    }
+//    else if(c == 'Z'){
+//      start=false;
+//    }
+//  }
+  if(start){
+    sw_state= (!digitalRead(joy_sw)<<4)|(!digitalRead(sw[3])<<3)|(!digitalRead(sw[2])<<2)|(!digitalRead(sw[1])<<1)|(!digitalRead(sw[0]));
+    joy_x_value=analogRead(joy_x);
+    joy_y_value=analogRead(joy_y);
+    sprintf(s,"%d,%d,%d\n",sw_state,joy_x_value,joy_y_value);
+    Serial.print(s);
+    memset(s,0,sizeof(s));
+    delay(50);
+  }
 }

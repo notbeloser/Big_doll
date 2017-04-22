@@ -12,17 +12,17 @@ doll doll_default_setting(){
 	d.l_eye.rev=0;
 
 	d.r_eye.channel_x=2;
-	d.r_eye.channel_x_gpio=14;
+	d.r_eye.channel_x_gpio=17;
 	d.r_eye.channel_y=3;
 	d.r_eye.channel_y_gpio=27;
-	d.r_eye.angle=0;
+	d.r_eye.angle=20;
 	d.r_eye.r=0;
 	d.r_eye.change_time_ms=300;
 	d.r_eye.rev=1;
 
 	d.l_ear.channel=4;
 	d.l_ear.channel_gpio=26;
-	d.l_ear.angle=0;
+	d.l_ear.angle=20;
 	d.l_ear.change_time_ms=300;
 	d.l_ear.rev=1;
 
@@ -114,11 +114,11 @@ void eye_set(eye_d eye){
 
 	if(eye.rev){
 		x=eye.r*cos(radians(eye.angle))+1300;
-		y=(eye.r)*sin(radians(eye.angle))+eye_center;
+		y=(eye.r)*sin(radians(eye.angle))*1.2+eye_center;
 	}
 	else{
-		x=eye.r*cos(radians(eye.angle))+1450;
-		y=(-eye.r)*sin(radians(eye.angle))+eye_center;
+		x=eye.r*cos(radians(eye.angle))+1500;
+		y=(-eye.r)*sin(radians(eye.angle))*1.2+eye_center;
 	}
 	ledcWrite(eye.channel_y,(int)(y*0.8192));
 	ledcWrite(eye.channel_x,(int)(x*0.8192));

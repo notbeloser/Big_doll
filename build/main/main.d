@@ -115,6 +115,10 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_reg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_struct.h \
+ /home/notbeloser/esp/esp-idf/components/driver/include/driver/uart.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_struct.h \
+ /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
@@ -123,9 +127,7 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/uart.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/i2c.h \
- /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_reg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_struct.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/Arduino.h \
@@ -381,6 +383,14 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_struct.h:
 
+/home/notbeloser/esp/esp-idf/components/driver/include/driver/uart.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_struct.h:
+
+/home/notbeloser/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
+
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
@@ -397,11 +407,7 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
-
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/i2c.h:
-
-/home/notbeloser/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_reg.h:
 

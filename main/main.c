@@ -19,6 +19,7 @@
 #include "driver/pcnt.h"
 #include "driver/gpio.h"
 #include "driver/periph_ctrl.h"
+#include "driver/uart.h"
 
 #include "lwip/err.h"
 #include "lwip/sockets.h"
@@ -32,6 +33,7 @@
 #include "soc/ledc_reg.h"
 #include "soc/ledc_struct.h"
 #include "soc/gpio_sig_map.h"
+#include "soc/uart_struct.h"
 
 #include "Arduino.h"
 #include "esp32-hal.h"
@@ -46,6 +48,7 @@ int servo=0;
 uart_t* left_uart;
 uart_t* right_uart;
 char left_str[50],right_str[50];
+uint8_t data[]="A";
 int uart_readString(char* s,uart_t* u){
 	int index=0;
 	while(uartAvailable(u)){
@@ -115,28 +118,58 @@ int l_bt,r_bt,l_x,l_y,r_x,r_y;
 //}
 void app_main(){
 	nvs_flash_init();
+	left_uart=uartBegin(1, 38400, SERIAL_8N1, 18,19, 2048, 0);
+	right_uart=uartBegin(2, 38400, SERIAL_8N1, 21,22, 2048, 0);
+
 	d=doll_default_setting();
 	doll_init(d);
-	left_uart=uartBegin(1, 115200, SERIAL_8N1, 18,19, 2048, 0);
-	right_uart=uartBegin(2, 115200, SERIAL_8N1, 21,22, 2048, 0);
 	while(1){
-			if( uart_readString(left_str,left_uart)>0 ){
-				if(sscanf(left_str,"%d,%d,%d\n",&l_bt,&l_x,&l_y) == 3){
-				printf("%d,%d,%d\n",l_bt,l_x,l_y);
-				d.l_bow.y=d.r_bow.y=((double)l_y-512)/512*10+8;
-				d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
-				printf("%f,%f\n\n",d.r_bow.y, d.l_bow.angle );
-				doll_set(d);
+		if(uart_readString(left_str,left_uart)!=0){
+			if( uart_readString(right_str,right_uart)!=0){
+				printf("%s\t%s",left_str,right_str);
+				if( sscanf(left_str,"%d,%d,%d\n",&l_bt,&l_x,&l_y) == 3 && sscanf(right_str,"%d,%d,%d\n",&r_bt,&r_x,&r_y) == 3 && left_str[strlen(left_str)-1]=='\n' && right_str[strlen(right_str)-1] == '\n'){
+					d.l_bow.y=d.r_bow.y=((double)l_y-512)/512*10+8;
+					d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
+					if(l_bt == 8){
+						d.l_ear.angle=40;
+					}
+					else if(l_bt==4){
+						d.l_ear.angle=25;
+					}
+					else if(l_bt==2){
+						d.l_ear.angle=10;
+					}
+					else if(l_bt==1){
+						d.l_ear.angle=-10;
+					}
+					double eye_x=((double)r_x-511)/2.1;
+					double eye_y=((double)r_y-511)/2.1;
+					double eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
+					double eye_angle=degrees(atan2(eye_y+0.001,eye_x+0.001));
+					d.l_eye.r  =d.r_eye.r= eye_r;
+					d.l_eye.angle =d.r_eye.angle = eye_angle;
+
+					if(r_bt == 8){
+						d.r_ear.angle=40;
+					}
+					else if(r_bt==4){
+						d.r_ear.angle=25;
+					}
+					else if(r_bt==2){
+						d.r_ear.angle=10;
+					}
+					else if(r_bt==1){
+						d.r_ear.angle=-10;
+					}
+					doll_set(d);
 				}
-		}
-		if(uart_readString(right_str,right_uart)>0){
-			if(sscanf(right_str,"%d,%d,%d\n",&r_bt,&r_x,&r_y) == 3){
-				double eye_x=((double)r_x-511)/2.1;
-				double eye_y=((double)r_y-511)/2.1;
-				double eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
-				double eye_angle=degrees(atan2(eye_y+0.001,eye_x+0.001));
-				d.l_eye.r  =d.r_eye.r= eye_r;
-				d.l_eye.angle =d.r_eye.angle = eye_angle;
+				else{
+					delay(60);
+					while( uartAvailable(left_uart) )
+						uartRead(left_uart);
+					while( uartAvailable(right_uart) )
+						uartRead(right_uart);
+				}
 			}
 		}
 	}
