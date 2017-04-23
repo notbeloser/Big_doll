@@ -27,10 +27,10 @@ hwcrypto/sha.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/hwcrypto_reg.h
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/hwcrypto_reg.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/string.h:
 
@@ -86,10 +86,10 @@ hwcrypto/sha.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/hwcrypto_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/hwcrypto_reg.h:

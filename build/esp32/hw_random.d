@@ -17,8 +17,8 @@ hw_random.o: /home/notbeloser/esp/esp-idf/components/esp32/./hw_random.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/wdev_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/wdev_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -35,7 +35,7 @@ hw_random.o: /home/notbeloser/esp/esp-idf/components/esp32/./hw_random.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/core-macros.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
@@ -74,9 +74,9 @@ hw_random.o: /home/notbeloser/esp/esp-idf/components/esp32/./hw_random.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/wdev_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/wdev_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -110,6 +110,6 @@ hw_random.o: /home/notbeloser/esp/esp-idf/components/esp32/./hw_random.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/core-macros.h:

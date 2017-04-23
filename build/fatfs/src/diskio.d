@@ -30,20 +30,19 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/fatfs/src/ffconf.h \
+ /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -58,7 +57,7 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -67,6 +66,7 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -139,17 +139,17 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
@@ -157,15 +157,13 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
 /home/notbeloser/esp/esp-idf/components/fatfs/src/ffconf.h:
+
+/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -195,7 +193,7 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -212,6 +210,8 @@ src/diskio.o: /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.c \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

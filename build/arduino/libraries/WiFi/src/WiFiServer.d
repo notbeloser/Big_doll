@@ -41,7 +41,7 @@ libraries/WiFi/src/WiFiServer.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -50,6 +50,7 @@ libraries/WiFi/src/WiFiServer.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -61,7 +62,7 @@ libraries/WiFi/src/WiFiServer.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/math.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-log.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-matrix.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-uart.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-gpio.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-touch.h \
@@ -72,21 +73,25 @@ libraries/WiFi/src/WiFiServer.o: \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-ledc.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-sigmadelta.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-timer.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-bt.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/binary.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/WCharacter.h \
@@ -217,7 +222,7 @@ libraries/WiFi/src/WiFiServer.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -234,6 +239,8 @@ libraries/WiFi/src/WiFiServer.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -257,7 +264,7 @@ libraries/WiFi/src/WiFiServer.o: \
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-matrix.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-uart.h:
 
@@ -279,6 +286,8 @@ libraries/WiFi/src/WiFiServer.o: \
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-timer.h:
 
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-bt.h:
+
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_system.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
@@ -289,25 +298,31 @@ libraries/WiFi/src/WiFiServer.o: \
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h:
 

@@ -20,7 +20,8 @@ xtensa_vectors.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_timer.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_panic.h
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_panic.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h:
 
@@ -63,3 +64,5 @@ xtensa_vectors.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_panic.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:

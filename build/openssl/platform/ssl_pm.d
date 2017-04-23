@@ -28,7 +28,7 @@ platform/ssl_pm.o: \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/malloc.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/malloc.h \
  /home/notbeloser/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
@@ -50,6 +50,7 @@ platform/ssl_pm.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/net.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h \
@@ -132,7 +133,7 @@ platform/ssl_pm.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/malloc.h:
 
@@ -175,6 +176,8 @@ platform/ssl_pm.o: \
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/net.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
 

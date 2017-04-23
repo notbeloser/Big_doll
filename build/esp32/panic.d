@@ -24,7 +24,12 @@ panic.o: /home/notbeloser/esp/esp-idf/components/esp32/./panic.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/rom/uart.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
@@ -42,27 +47,32 @@ panic.o: /home/notbeloser/esp/esp-idf/components/esp32/./panic.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/limits.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/list.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/timer_group_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/cpu.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_gdbstub.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_panic.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_core_dump.h
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_core_dump.h \
+ /home/notbeloser/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_cache_err_int.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_app_trace.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -114,7 +124,17 @@ panic.o: /home/notbeloser/esp/esp-idf/components/esp32/./panic.c \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/rom/uart.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -150,6 +170,8 @@ panic.o: /home/notbeloser/esp/esp-idf/components/esp32/./panic.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -162,21 +184,19 @@ panic.o: /home/notbeloser/esp/esp-idf/components/esp32/./panic.c \
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/timer_group_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/cpu.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_gdbstub.h:
 
@@ -184,10 +204,20 @@ panic.o: /home/notbeloser/esp/esp-idf/components/esp32/./panic.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_core_dump.h:
+
+/home/notbeloser/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_cache_err_int.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_app_trace.h:

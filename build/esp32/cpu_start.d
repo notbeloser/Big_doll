@@ -18,31 +18,35 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/uart.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/rtc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/cache.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/cpu.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
@@ -66,6 +70,7 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -86,8 +91,6 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
@@ -99,32 +102,36 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/errno.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/heap_alloc_caps.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_heap_alloc_caps.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_deep_sleep.h \
+ /home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/notbeloser/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/notbeloser/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_ipc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
  /home/notbeloser/esp/esp-idf/components/vfs/include/esp_vfs_dev.h \
  /home/notbeloser/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/dirent.h \
  /home/notbeloser/esp/esp-idf/components/vfs/include/sys/dirent.h \
  /home/notbeloser/esp/esp-idf/components/newlib/platform_include/esp_newlib.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_brownout.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/esp_brownout.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_int_wdt.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_task_wdt.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_phy_init.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_cache_err_int.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_coexist.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_panic.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_core_dump.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_app_trace.h \
  /home/notbeloser/esp/esp-idf/components/xtensa-debug-module/include/trax.h \
  /home/notbeloser/esp/esp-idf/components/xtensa-debug-module/include/eri.h \
  /home/notbeloser/esp/esp-idf/components/xtensa-debug-module/include/xtensa-debug-module.h
@@ -167,11 +174,19 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/uart.h:
 
@@ -179,43 +194,43 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/rtc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/cache.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/cpu.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/timer_group_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/rtc_io.h:
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -263,6 +278,8 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -303,10 +320,6 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h:
 
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
-
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/time.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/fcntl.h:
@@ -329,10 +342,6 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
-/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
-
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
@@ -341,11 +350,19 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/heap_alloc_caps.h:
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_heap_alloc_caps.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_system.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_deep_sleep.h:
+
+/home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/notbeloser/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
@@ -354,8 +371,6 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_ipc.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
 
@@ -369,7 +384,7 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_brownout.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/esp_brownout.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_int_wdt.h:
 
@@ -377,9 +392,15 @@ cpu_start.o: /home/notbeloser/esp/esp-idf/components/esp32/./cpu_start.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_phy_init.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_cache_err_int.h:
+
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_coexist.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_panic.h:
+
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_core_dump.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_app_trace.h:
 
 /home/notbeloser/esp/esp-idf/components/xtensa-debug-module/include/trax.h:
 

@@ -21,6 +21,10 @@ event_default_handlers.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -37,7 +41,7 @@ event_default_handlers.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -46,11 +50,11 @@ event_default_handlers.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h \
@@ -62,8 +66,6 @@ event_default_handlers.o: \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
@@ -80,8 +82,6 @@ event_default_handlers.o: \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/list.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
@@ -134,6 +134,14 @@ event_default_handlers.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi.h:
@@ -166,7 +174,7 @@ event_default_handlers.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -184,6 +192,8 @@ event_default_handlers.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -191,8 +201,6 @@ event_default_handlers.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
 
@@ -215,10 +223,6 @@ event_default_handlers.o: \
 /home/notbeloser/esp/esp-idf/components/newlib/include/time.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/time.h:
 
@@ -251,10 +255,6 @@ event_default_handlers.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
 

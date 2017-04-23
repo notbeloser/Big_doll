@@ -38,7 +38,7 @@ port/freertos/sys_arch.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -47,6 +47,7 @@ port/freertos/sys_arch.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -75,7 +76,8 @@ port/freertos/sys_arch.o: \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h \
- /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h
+ /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h \
+ /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h:
 
@@ -153,7 +155,7 @@ port/freertos/sys_arch.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -170,6 +172,8 @@ port/freertos/sys_arch.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -228,3 +232,5 @@ port/freertos/sys_arch.o: \
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h:
+
+/home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:

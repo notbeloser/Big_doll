@@ -28,14 +28,16 @@ time.o: /home/notbeloser/esp/esp-idf/components/newlib/./time.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/frc_timer_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/frc_timer_reg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -58,6 +60,7 @@ time.o: /home/notbeloser/esp/esp-idf/components/newlib/./time.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
@@ -123,7 +126,7 @@ time.o: /home/notbeloser/esp/esp-idf/components/newlib/./time.c \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
@@ -131,13 +134,17 @@ time.o: /home/notbeloser/esp/esp-idf/components/newlib/./time.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/frc_timer_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/frc_timer_reg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -182,6 +189,8 @@ time.o: /home/notbeloser/esp/esp-idf/components/newlib/./time.c \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

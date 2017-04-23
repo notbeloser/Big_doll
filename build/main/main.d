@@ -38,7 +38,7 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -47,6 +47,7 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -63,17 +64,19 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
@@ -109,15 +112,13 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/ledc.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/pcnt.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/pcnt_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/uart.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
@@ -128,8 +129,8 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/uart.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/i2c.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/ledc_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/ledc_struct.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/Arduino.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/inttypes.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal.h \
@@ -145,6 +146,7 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-ledc.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-sigmadelta.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-timer.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-bt.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h \
  /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/binary.h \
  /home/notbeloser/esp/Big_doll/components/arduino/variants/esp32/pins_arduino.h \
@@ -229,7 +231,7 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -246,6 +248,8 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -279,27 +283,31 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi.h:
 
@@ -371,23 +379,19 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/pcnt.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/pcnt_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_reg.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/pcnt_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h:
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/uart.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/uart_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
@@ -409,9 +413,9 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/i2c.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/ledc_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/ledc_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/ledc_struct.h:
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/Arduino.h:
 
@@ -442,6 +446,8 @@ main.o: /home/notbeloser/esp/Big_doll/main/./main.c \
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-sigmadelta.h:
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-timer.h:
+
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-bt.h:
 
 /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/stdlib_noniso.h:
 

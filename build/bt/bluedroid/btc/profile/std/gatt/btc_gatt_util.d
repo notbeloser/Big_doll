@@ -29,13 +29,13 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/bta/include/bta_gatt_api.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
+ /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
- /home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
@@ -59,6 +59,7 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -84,6 +85,7 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/osi/include/thread.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/gatt_api.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
@@ -153,6 +155,8 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
 
+/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
+
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h:
@@ -161,11 +165,9 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
 
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
 
@@ -212,6 +214,8 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -262,6 +266,8 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/gatt_api.h:
 

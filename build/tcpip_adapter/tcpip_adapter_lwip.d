@@ -62,7 +62,7 @@ tcpip_adapter_lwip.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -71,6 +71,7 @@ tcpip_adapter_lwip.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -101,13 +102,15 @@ tcpip_adapter_lwip.o: \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/nd6.h \
+ /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/tcpip_priv.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/netif/wlanif.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/netif/ethernetif.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -233,7 +236,7 @@ tcpip_adapter_lwip.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -250,6 +253,8 @@ tcpip_adapter_lwip.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -311,6 +316,8 @@ tcpip_adapter_lwip.o: \
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/nd6.h:
 
+/home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/priv/tcpip_priv.h:
+
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/netif/wlanif.h:
@@ -324,3 +331,5 @@ tcpip_adapter_lwip.o: \
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/port/netif/ethernetif.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:

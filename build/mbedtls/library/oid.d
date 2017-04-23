@@ -12,14 +12,6 @@ library/oid.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/features.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/md.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/config.h \
@@ -34,6 +26,14 @@ library/oid.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/md.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/string.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
@@ -68,22 +68,6 @@ library/oid.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/md.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h:
-
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
-
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h:
@@ -111,6 +95,22 @@ library/oid.o: \
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/md.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/string.h:
 

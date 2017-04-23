@@ -39,7 +39,7 @@ esp_ota_ops.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -48,6 +48,7 @@ esp_ota_ops.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -59,11 +60,14 @@ esp_ota_ops.o: \
  /home/notbeloser/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/notbeloser/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /home/notbeloser/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/efuse_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/app_update/include/esp_ota_ops.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/crc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
@@ -144,7 +148,7 @@ esp_ota_ops.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -161,6 +165,8 @@ esp_ota_ops.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -184,14 +190,20 @@ esp_ota_ops.o: \
 
 /home/notbeloser/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/efuse_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/notbeloser/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/notbeloser/esp/esp-idf/components/app_update/include/esp_ota_ops.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/crc.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:

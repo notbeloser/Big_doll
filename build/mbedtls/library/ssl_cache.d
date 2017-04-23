@@ -29,6 +29,7 @@ library/ssl_cache.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_cache.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -105,6 +106,8 @@ library/ssl_cache.o: \
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_cache.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
 

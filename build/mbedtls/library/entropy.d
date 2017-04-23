@@ -25,11 +25,11 @@ library/entropy.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/lock.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
@@ -86,8 +86,6 @@ library/entropy.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h:
 
-/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
-
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
@@ -95,6 +93,8 @@ library/entropy.o: \
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
 

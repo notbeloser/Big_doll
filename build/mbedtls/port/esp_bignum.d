@@ -34,27 +34,25 @@ port/esp_bignum.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/bigint.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/hwcrypto_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/hwcrypto_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
@@ -65,7 +63,9 @@ port/esp_bignum.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h \
+ /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -77,6 +77,7 @@ port/esp_bignum.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -152,9 +153,9 @@ port/esp_bignum.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/bigint.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/hwcrypto_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/hwcrypto_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_system.h:
 
@@ -164,19 +165,17 @@ port/esp_bignum.o: \
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
@@ -184,15 +183,13 @@ port/esp_bignum.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
-/home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
@@ -214,7 +211,11 @@ port/esp_bignum.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/dport_reg.h:
+/home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -237,6 +238,8 @@ port/esp_bignum.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

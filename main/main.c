@@ -40,138 +40,99 @@
 #include "big_doll.h"
 #define true 1
 #define false 0
-doll d;
-int i=0;
-char temp,str[20];
-double t;
-int servo=0;
-uart_t* left_uart;
-uart_t* right_uart;
-char left_str[50],right_str[50];
-uint8_t data[]="A";
-int uart_readString(char* s,uart_t* u){
-	int index=0;
-	while(uartAvailable(u)){
-		if(index==0)
-			memset(s,0,50);
-		s[index]=uartRead(u);
-		if(s[index]=='\n')
-			break;
-		index++;
-	}
-	return index;
-}
-int l_bt,r_bt,l_x,l_y,r_x,r_y;
-//void uart_test(){
-//	scanf("%c",&temp);
-//	if(temp!=0){
-//		printf("%c",temp);
-//		str[i]=temp;
-//		i++;
-//		fflush(stdout);
-//		if(temp=='\n'){
-//			if(sscanf(str,"%d %lf\n",&servo,&t) == 2){
-//				ESP_LOGI("Servo_test","Servo%d,t =%lf",servo,t);
-//				switch(servo){
-//				case 0:
-//					d.l_eye.r=t;
-//					break;
-//				case 1:
-//					d.l_eye.angle=t;
-//					break;
-//				case 2:
-//					d.r_eye.r=t;
-//					break;
-//				case 3:
-//					d.r_eye.angle=t;
-//					break;
-//				case 4:
-//					d.l_ear.angle=t;
-//					break;
-//				case 5:
-//					d.r_ear.angle=t;
-//					break;
-//				case 6:
-//					d.l_bow.angle=t;
-//					break;
-//				case 7:
-//					d.l_bow.y=t;
-//					break;
-//				case 8:
-//					d.r_bow.angle=t;
-//					break;
-//				case 9:
-//					d.r_bow.y=t;
-//					break;
-//				case 10:
-//					d.mouth.angle=t;
-//					break;
-//				}
-//				doll_set(d);
-//			}
-//			memset(str,0,sizeof(str));
-//			i=0;
-//		}
-//	}
-//	vTaskDelay(10 / portTICK_PERIOD_MS);
-//	temp=0;
-//}
-void app_main(){
-	nvs_flash_init();
-	left_uart=uartBegin(1, 38400, SERIAL_8N1, 18,19, 2048, 0);
-	right_uart=uartBegin(2, 38400, SERIAL_8N1, 21,22, 2048, 0);
 
+#define RXD1  18
+#define TXD1  19
+#define RXD2  21
+#define TXD2  22
+#define BUF_SIZE (1024)
+
+static void big_doll(){
+	doll d;
+	int l_bt,r_bt,l_x,l_y,r_x,r_y;
 	d=doll_default_setting();
 	doll_init(d);
-	while(1){
-		if(uart_readString(left_str,left_uart)!=0){
-			if( uart_readString(right_str,right_uart)!=0){
-				printf("%s\t%s",left_str,right_str);
-				if( sscanf(left_str,"%d,%d,%d\n",&l_bt,&l_x,&l_y) == 3 && sscanf(right_str,"%d,%d,%d\n",&r_bt,&r_x,&r_y) == 3 && left_str[strlen(left_str)-1]=='\n' && right_str[strlen(right_str)-1] == '\n'){
-					d.l_bow.y=d.r_bow.y=((double)l_y-512)/512*10+8;
-					d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
-					if(l_bt == 8){
-						d.l_ear.angle=40;
-					}
-					else if(l_bt==4){
-						d.l_ear.angle=25;
-					}
-					else if(l_bt==2){
-						d.l_ear.angle=10;
-					}
-					else if(l_bt==1){
-						d.l_ear.angle=-10;
-					}
-					double eye_x=((double)r_x-511)/2.1;
-					double eye_y=((double)r_y-511)/2.1;
-					double eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
-					double eye_angle=degrees(atan2(eye_y+0.001,eye_x+0.001));
-					d.l_eye.r  =d.r_eye.r= eye_r;
-					d.l_eye.angle =d.r_eye.angle = eye_angle;
+    uart_config_t uart_config = {
+        .baud_rate = 38400,
+        .data_bits = UART_DATA_8_BITS,
+        .parity = UART_PARITY_DISABLE,
+        .stop_bits = UART_STOP_BITS_1,
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+        .rx_flow_ctrl_thresh = 122,
+    };
+    uart_param_config(UART_NUM_1, &uart_config);
+    uart_set_pin(UART_NUM_1,TXD1, RXD1, NULL, NULL);
+    uart_driver_install(UART_NUM_1, BUF_SIZE * 2, 0, 0, NULL, 0);
 
-					if(r_bt == 8){
-						d.r_ear.angle=40;
-					}
-					else if(r_bt==4){
-						d.r_ear.angle=25;
-					}
-					else if(r_bt==2){
-						d.r_ear.angle=10;
-					}
-					else if(r_bt==1){
-						d.r_ear.angle=-10;
-					}
-					doll_set(d);
+	uart_param_config(UART_NUM_2, &uart_config);
+	uart_set_pin(UART_NUM_2,TXD2, RXD2, NULL, NULL);
+	uart_driver_install(UART_NUM_2, BUF_SIZE * 2, 0, 0, NULL, 0);
+
+    uint8_t* left_str = (uint8_t*) malloc(BUF_SIZE);
+    uint8_t* right_str = (uint8_t*) malloc(BUF_SIZE);
+
+    memset(left_str,0,BUF_SIZE);
+    memset(right_str,0,BUF_SIZE);
+	int state=0,left_str_len=0,right_str_len=0;
+    while(1) {
+	switch(state){
+		case 0:
+			left_str_len = uart_read_bytes(UART_NUM_1, left_str, BUF_SIZE, 5/ portTICK_RATE_MS);
+			if(left_str_len>0)
+				state=1;
+			break;
+		case 1:
+			right_str_len = uart_read_bytes(UART_NUM_2, right_str, BUF_SIZE, 5/ portTICK_RATE_MS);
+			if(right_str_len>0)
+				state=2;
+			break;
+		case 2:
+			printf("%s\t%s",left_str,right_str);
+			if( sscanf((char *)left_str,"%d,%d,%d\n",&l_bt,&l_x,&l_y) == 3 && sscanf((char *)right_str,"%d,%d,%d\n",&r_bt,&r_x,&r_y) == 3		){
+				d.l_bow.y=d.r_bow.y=((double)l_y-512)/512*10+8;
+				d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
+				if(l_bt == 8){
+					d.l_ear.angle=40;
 				}
-				else{
-					delay(60);
-					while( uartAvailable(left_uart) )
-						uartRead(left_uart);
-					while( uartAvailable(right_uart) )
-						uartRead(right_uart);
+				else if(l_bt==4){
+					d.l_ear.angle=25;
 				}
+				else if(l_bt==2){
+					d.l_ear.angle=10;
+				}
+				else if(l_bt==1){
+					d.l_ear.angle=-10;
+				}
+				double eye_x=((double)r_x-511)/2.1;
+				double eye_y=((double)r_y-511)/2.1;
+				double eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
+				double eye_angle=degrees(atan2(eye_y+0.001,eye_x+0.001));
+				d.l_eye.r  =d.r_eye.r= eye_r;
+				d.l_eye.angle =d.r_eye.angle = eye_angle;
+
+				if(r_bt == 8){
+					d.r_ear.angle=40;
+				}
+				else if(r_bt==4){
+					d.r_ear.angle=25;
+				}
+				else if(r_bt==2){
+					d.r_ear.angle=10;
+				}
+				else if(r_bt==1){
+					d.r_ear.angle=-10;
+				}
+				doll_set(d);
 			}
+		    memset(left_str,0,BUF_SIZE);
+		    memset(right_str,0,BUF_SIZE);
+			state=0;
+			break;
 		}
-	}
+    }
+}
+
+void app_main(){
+    xTaskCreate(big_doll, "big_doll",2048, NULL, 10, NULL);
 }
 

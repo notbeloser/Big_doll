@@ -16,17 +16,21 @@ src/vfs_fat_sdmmc.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/string.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
@@ -35,16 +39,15 @@ src/vfs_fat_sdmmc.o: \
  /home/notbeloser/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_host.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
@@ -71,13 +74,12 @@ src/vfs_fat_sdmmc.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/notbeloser/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
@@ -112,6 +114,10 @@ src/vfs_fat_sdmmc.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/string.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h:
+
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
@@ -122,17 +128,21 @@ src/vfs_fat_sdmmc.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/vfs/include/esp_vfs.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
-/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stat.h:
 
@@ -150,25 +160,23 @@ src/vfs_fat_sdmmc.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_types.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_struct.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_io_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/io_mux_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/gpio_sig_map.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
 
@@ -222,6 +230,8 @@ src/vfs_fat_sdmmc.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -231,9 +241,5 @@ src/vfs_fat_sdmmc.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
 /home/notbeloser/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/fatfs/src/diskio.h:

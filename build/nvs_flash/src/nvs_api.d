@@ -3,6 +3,10 @@ src/nvs_api.o: \
  /home/notbeloser/esp/esp-idf/components/nvs_flash/src/nvs.hpp \
  /home/notbeloser/esp/esp-idf/components/nvs_flash/include/nvs.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/nvs_flash/src/nvs_types.hpp \
  /home/notbeloser/esp/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp \
@@ -28,7 +32,7 @@ src/nvs_api.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -37,6 +41,7 @@ src/nvs_api.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -50,6 +55,14 @@ src/nvs_api.o: \
 /home/notbeloser/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
@@ -101,7 +114,7 @@ src/nvs_api.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -118,6 +131,8 @@ src/nvs_api.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

@@ -20,7 +20,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h \
+ /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -35,7 +35,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -44,6 +44,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/timers.h \
@@ -55,6 +56,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
@@ -134,7 +136,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h:
+/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -164,7 +166,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -181,6 +183,8 @@ bluedroid/bta/sys/bta_sys_main.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -203,6 +207,8 @@ bluedroid/bta/sys/bta_sys_main.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h:
 

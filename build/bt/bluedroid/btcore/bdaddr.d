@@ -24,9 +24,9 @@ bluedroid/btcore/bdaddr.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
- /home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h \
+ /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
@@ -54,6 +54,7 @@ bluedroid/btcore/bdaddr.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -112,11 +113,11 @@ bluedroid/btcore/bdaddr.o: \
 
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h:
+/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h:
 
@@ -171,6 +172,8 @@ bluedroid/btcore/bdaddr.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

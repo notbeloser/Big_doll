@@ -19,7 +19,7 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_heap_alloc_caps.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -44,6 +44,7 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -52,12 +53,12 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_defs.h \
  /home/notbeloser/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
- /home/notbeloser/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
+ /home/notbeloser/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/string.h:
 
@@ -99,7 +100,7 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_heap_alloc_caps.h:
 
@@ -149,6 +150,8 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -165,10 +168,6 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
-/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
-
-/home/notbeloser/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h:
-
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
@@ -176,3 +175,7 @@ sdmmc_cmd.o: /home/notbeloser/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
+
+/home/notbeloser/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h:

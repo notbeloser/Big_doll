@@ -21,6 +21,10 @@ freertos_hooks.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_freertos_hooks.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
@@ -64,5 +68,13 @@ freertos_hooks.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_freertos_hooks.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:

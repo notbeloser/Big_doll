@@ -28,6 +28,7 @@ port/net.o: /home/notbeloser/esp/esp-idf/components/mbedtls/port/net.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/net.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -74,7 +75,7 @@ port/net.o: /home/notbeloser/esp/esp-idf/components/mbedtls/port/net.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -83,6 +84,7 @@ port/net.o: /home/notbeloser/esp/esp-idf/components/mbedtls/port/net.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -158,6 +160,8 @@ port/net.o: /home/notbeloser/esp/esp-idf/components/mbedtls/port/net.c \
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/net.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
 
@@ -251,7 +255,7 @@ port/net.o: /home/notbeloser/esp/esp-idf/components/mbedtls/port/net.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -268,6 +272,8 @@ port/net.o: /home/notbeloser/esp/esp-idf/components/mbedtls/port/net.c \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

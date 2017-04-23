@@ -19,6 +19,10 @@ apps/ping/esp_ping.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
@@ -28,8 +32,6 @@ apps/ping/esp_ping.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
@@ -55,7 +57,7 @@ apps/ping/esp_ping.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -64,6 +66,7 @@ apps/ping/esp_ping.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -72,8 +75,6 @@ apps/ping/esp_ping.o: \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h
@@ -116,6 +117,14 @@ apps/ping/esp_ping.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h:
@@ -133,10 +142,6 @@ apps/ping/esp_ping.o: \
 /home/notbeloser/esp/esp-idf/components/newlib/include/time.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/time.h:
 
@@ -188,7 +193,7 @@ apps/ping/esp_ping.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -206,6 +211,8 @@ apps/ping/esp_ping.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -221,10 +228,6 @@ apps/ping/esp_ping.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
 

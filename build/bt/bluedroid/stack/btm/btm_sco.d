@@ -19,6 +19,7 @@ bluedroid/stack/btm/btm_sco.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
+ /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h \
@@ -27,9 +28,8 @@ bluedroid/stack/btm/btm_sco.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
- /home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/gki/include/gki.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/gki/include/gki_common.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/gki/include/gki.h \
@@ -59,6 +59,7 @@ bluedroid/stack/btm/btm_sco.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -84,6 +85,7 @@ bluedroid/stack/btm/btm_sco.o: \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/osi/include/thread.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/btm_int.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/hcidefs.h
 
@@ -125,6 +127,8 @@ bluedroid/stack/btm/btm_sco.o: \
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
 
+/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
+
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h:
@@ -141,11 +145,9 @@ bluedroid/stack/btm/btm_sco.o: \
 
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/gki/include/gki.h:
 
@@ -205,6 +207,8 @@ bluedroid/stack/btm/btm_sco.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -254,6 +258,8 @@ bluedroid/stack/btm/btm_sco.o: \
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/btm_int.h:
 

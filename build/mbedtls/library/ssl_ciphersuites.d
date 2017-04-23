@@ -38,6 +38,7 @@ library/ssl_ciphersuites.o: \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h \
@@ -123,6 +124,8 @@ library/ssl_ciphersuites.o: \
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 

@@ -49,7 +49,7 @@ port/netif/ethernetif.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -58,6 +58,7 @@ port/netif/ethernetif.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -95,7 +96,6 @@ port/netif/ethernetif.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h
@@ -198,7 +198,7 @@ port/netif/ethernetif.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -215,6 +215,8 @@ port/netif/ethernetif.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -289,8 +291,6 @@ port/netif/ethernetif.o: \
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
 

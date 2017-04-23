@@ -1,8 +1,10 @@
 deps_config := \
 	/home/notbeloser/esp/Big_doll/components/arduino/Kconfig \
+	/home/notbeloser/esp/esp-idf/components/aws_iot/Kconfig \
 	/home/notbeloser/esp/esp-idf/components/bt/Kconfig \
 	/home/notbeloser/esp/esp-idf/components/esp32/Kconfig \
 	/home/notbeloser/esp/esp-idf/components/ethernet/Kconfig \
+	/home/notbeloser/esp/esp-idf/components/fatfs/Kconfig \
 	/home/notbeloser/esp/esp-idf/components/freertos/Kconfig \
 	/home/notbeloser/esp/esp-idf/components/log/Kconfig \
 	/home/notbeloser/esp/esp-idf/components/lwip/Kconfig \

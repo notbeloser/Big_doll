@@ -16,7 +16,7 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/cpu.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
@@ -33,7 +33,7 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -42,6 +42,7 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -49,7 +50,8 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/limits.h \
- /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/list.h
+ /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/list.h \
+ /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/lock.h:
 
@@ -85,7 +87,7 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/cpu.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -119,7 +121,7 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -137,6 +139,8 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -152,3 +156,5 @@ locks.o: /home/notbeloser/esp/esp-idf/components/newlib/./locks.c \
 /home/notbeloser/esp/esp-idf/components/newlib/include/limits.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/list.h:
+
+/home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h:

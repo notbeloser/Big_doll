@@ -8,40 +8,42 @@ bluedroid/api/esp_blufi_api.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/newlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/config.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/_types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/lock.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
+ /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
- /home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -63,6 +65,7 @@ bluedroid/api/esp_blufi_api.o: \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -74,10 +77,8 @@ bluedroid/api/esp_blufi_api.o: \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/osi/include/thread.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/profile/esp/include/btc_blufi_prf.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h \
- /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/include/btc_manage.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
@@ -117,7 +118,7 @@ bluedroid/api/esp_blufi_api.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
-/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -129,27 +130,7 @@ bluedroid/api/esp_blufi_api.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
-
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/reent.h:
 
@@ -161,29 +142,53 @@ bluedroid/api/esp_blufi_api.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/lock.h:
 
-/home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
-
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/include/btc_task.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
+
+/home/notbeloser/esp/Big_doll/build/include/sdkconfig.h:
+
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_trace.h:
 
 /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/notbeloser/esp/Doll_ESP32/build/include/sdkconfig.h:
-
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_defs.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -227,6 +232,8 @@ bluedroid/api/esp_blufi_api.o: \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -249,13 +256,9 @@ bluedroid/api/esp_blufi_api.o: \
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_task.h:
+
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/profile/esp/include/btc_blufi_prf.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/bt_target.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/include/gki_target.h:
-
-/home/notbeloser/esp/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h:
 
 /home/notbeloser/esp/esp-idf/components/bt/bluedroid/btc/include/btc_manage.h:
 

@@ -17,9 +17,10 @@ libraries/SPI/src/SPI.o: \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h \
- /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-spi.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/variants/esp32/pins_arduino.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
+ /home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-spi.h
 
 /home/notbeloser/esp/Big_doll/components/arduino/libraries/SPI/src/SPI.h:
 
@@ -55,8 +56,10 @@ libraries/SPI/src/SPI.o: \
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/alloca.h:
 
-/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-spi.h:
+/home/notbeloser/esp/Big_doll/components/arduino/variants/esp32/pins_arduino.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h:
+
+/home/notbeloser/esp/Big_doll/components/arduino/cores/esp32/esp32-hal-spi.h:

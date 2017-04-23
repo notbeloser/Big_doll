@@ -29,11 +29,11 @@ ulp.o: /home/notbeloser/esp/esp-idf/components/ulp/./ulp.c \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/ulp/include/esp32/ulp.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/sens_reg.h
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -95,12 +95,12 @@ ulp.o: /home/notbeloser/esp/esp-idf/components/ulp/./ulp.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/ulp/include/esp32/ulp.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/rtc_cntl_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/sens_reg.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h:

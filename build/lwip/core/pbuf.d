@@ -48,7 +48,7 @@ core/pbuf.o: /home/notbeloser/esp/esp-idf/components/lwip/core/pbuf.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h \
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -57,6 +57,7 @@ core/pbuf.o: /home/notbeloser/esp/esp-idf/components/lwip/core/pbuf.c \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -89,19 +90,6 @@ core/pbuf.o: /home/notbeloser/esp/esp-idf/components/lwip/core/pbuf.c \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/icmp6.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/string.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/notbeloser/esp/esp-idf/components/newlib/include/assert.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h \
- /home/notbeloser/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
- /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
- /home/notbeloser/esp/esp-idf/components/ethernet/include/esp_eth.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/tcpip.h \
  /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/timers.h
 
@@ -203,7 +191,7 @@ core/pbuf.o: /home/notbeloser/esp/esp-idf/components/lwip/core/pbuf.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -220,6 +208,8 @@ core/pbuf.o: /home/notbeloser/esp/esp-idf/components/lwip/core/pbuf.c \
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/notbeloser/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /home/notbeloser/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -284,32 +274,6 @@ core/pbuf.o: /home/notbeloser/esp/esp-idf/components/lwip/core/pbuf.c \
 /home/notbeloser/esp/esp-idf/components/newlib/include/string.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/string.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_internal.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
-
-/home/notbeloser/esp/esp-idf/components/newlib/include/assert.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_interface.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_event.h:
-
-/home/notbeloser/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/rom/queue.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
-
-/home/notbeloser/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
-
-/home/notbeloser/esp/esp-idf/components/ethernet/include/esp_eth.h:
-
-/home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/notbeloser/esp/esp-idf/components/lwip/include/lwip/lwip/tcpip.h:
 

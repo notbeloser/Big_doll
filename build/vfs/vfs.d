@@ -23,8 +23,10 @@ vfs.o: /home/notbeloser/esp/esp-idf/components/vfs/./vfs.c \
  /home/notbeloser/esp/esp-idf/components/newlib/include/stdint.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/time.h \
  /home/notbeloser/esp/esp-idf/components/newlib/include/machine/time.h \
@@ -33,7 +35,7 @@ vfs.o: /home/notbeloser/esp/esp-idf/components/vfs/./vfs.c \
  /home/notbeloser/esp/esp-idf/components/log/include/esp_log.h \
  /home/notbeloser/esp/Big_doll/build/include/sdkconfig.h \
  /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h
+ /home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -83,9 +85,13 @@ vfs.o: /home/notbeloser/esp/esp-idf/components/vfs/./vfs.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/esp_err.h:
 
+/home/notbeloser/esp/esp-idf/components/newlib/include/stdio.h:
+
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/types.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/notbeloser/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/notbeloser/esp/esp-idf/components/newlib/include/sys/stat.h:
 
@@ -103,4 +109,4 @@ vfs.o: /home/notbeloser/esp/esp-idf/components/vfs/./vfs.c \
 
 /home/notbeloser/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/notbeloser/esp/esp-idf/components/esp32/include/soc/soc.h:
+/home/notbeloser/esp/esp-idf/components/soc/esp32/include/soc/soc.h:

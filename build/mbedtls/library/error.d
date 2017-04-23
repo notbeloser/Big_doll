@@ -72,6 +72,7 @@ library/error.o: \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/pkcs5.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h \
  /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h \
@@ -223,6 +224,8 @@ library/error.o: \
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+
+/home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
 /home/notbeloser/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 
