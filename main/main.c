@@ -87,9 +87,11 @@ static void big_doll(){
 				state=2;
 			break;
 		case 2:
-			printf("%s\t%s",left_str,right_str);
+
 			if( sscanf((char *)left_str,"%d,%d,%d\n",&l_bt,&l_x,&l_y) == 3 && sscanf((char *)right_str,"%d,%d,%d\n",&r_bt,&r_x,&r_y) == 3		){
-				d.l_bow.y=d.r_bow.y=((double)l_y-512)/512*10+8;
+				printf("left=%d,%d,%d right=%d,%d,%d\n",l_bt,l_x,l_y,r_bt,r_x,r_y);
+				d.l_bow.y=((double)l_y-512)/512*8-6;
+				d.r_bow.y=((double)l_y-512)/512*8-5;
 				d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
 				if(l_bt == 8){
 					d.l_ear.angle=40;
@@ -103,8 +105,8 @@ static void big_doll(){
 				else if(l_bt==1){
 					d.l_ear.angle=-10;
 				}
-				double eye_x=((double)r_x-511)/2.1;
-				double eye_y=((double)r_y-511)/2.1;
+				double eye_x=((double)r_x-511)/1.2;
+				double eye_y=((double)r_y-511)/1.2;
 				double eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
 				double eye_angle=degrees(atan2(eye_y+0.001,eye_x+0.001));
 				d.l_eye.r  =d.r_eye.r= eye_r;
@@ -122,6 +124,13 @@ static void big_doll(){
 				else if(r_bt==1){
 					d.r_ear.angle=-10;
 				}
+
+				if(r_bt>=16){
+					d.mouth.angle=30;
+				}
+				else{
+					d.mouth.angle=0;
+				}
 				doll_set(d);
 			}
 		    memset(left_str,0,BUF_SIZE);
@@ -132,7 +141,104 @@ static void big_doll(){
     }
 }
 
+#define EXAMPLE_WIFI_SSID "27H7F"
+#define EXAMPLE_WIFI_PASS "0926980187"
+static EventGroupHandle_t wifi_event_group;
+const int CONNECTED_BIT = BIT0;
+static const char *TAG = "example";
+
+static esp_err_t event_handler(void *ctx, system_event_t *event){
+    switch(event->event_id) {
+    case SYSTEM_EVENT_STA_START:
+        esp_wifi_connect();
+        break;
+    case SYSTEM_EVENT_STA_GOT_IP:
+        xEventGroupSetBits(wifi_event_group, CONNECTED_BIT);
+        break;
+    case SYSTEM_EVENT_STA_DISCONNECTED:
+        /* This is a workaround as ESP32 WiFi libs don't currently
+           auto-reassociate. */
+        esp_wifi_connect();
+        xEventGroupClearBits(wifi_event_group, CONNECTED_BIT);
+        break;
+    default:
+        break;
+    }
+    return ESP_OK;
+}
+static void initialise_wifi(void){
+    tcpip_adapter_init();
+    wifi_event_group = xEventGroupCreate();
+    ESP_ERROR_CHECK( esp_event_loop_init(event_handler, NULL) );
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
+    ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = EXAMPLE_WIFI_SSID,
+            .password = EXAMPLE_WIFI_PASS,
+        },
+    };
+    ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
+    ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
+    ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
+    ESP_ERROR_CHECK( esp_wifi_start() );
+}
+static void wifi_control(void *pvParameters){
+    const struct addrinfo hints = {
+        .ai_family = AF_INET,
+        .ai_socktype = SOCK_STREAM,
+    };
+    struct addrinfo *res;
+    struct in_addr *addr;
+    int s, r;
+    char recv_buf[64];
+
+    while(1) {
+        xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,false, true, portMAX_DELAY);
+        ESP_LOGI(TAG, "Connected to AP");
+        int err = getaddrinfo("192.168.0.18",6000, &hints, &res);
+        if(err != 0 || res == NULL) {
+            ESP_LOGE(TAG, "DNS lookup failed err=%d res=%p", err, res);
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+            continue;
+        }
+        addr = &((struct sockaddr_in *)res->ai_addr)->sin_addr;
+        ESP_LOGI(TAG, "DNS lookup succeeded. IP=%s", inet_ntoa(*addr));
+
+        s = socket(res->ai_family, res->ai_socktype, 0);
+        if(s < 0) {
+            ESP_LOGE(TAG, "... Failed to allocate socket.");
+            freeaddrinfo(res);
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+            continue;
+        }
+        ESP_LOGI(TAG, "... allocated socket\r\n");
+
+        if(connect(s, res->ai_addr, res->ai_addrlen) != 0) {
+            ESP_LOGE(TAG, "... socket connect failed errno=%d", errno);
+            close(s);
+            freeaddrinfo(res);
+            vTaskDelay(4000 / portTICK_PERIOD_MS);
+            continue;
+        }
+        ESP_LOGI(TAG, "... connected");
+        freeaddrinfo(res);
+        while(1){
+			bzero(recv_buf, sizeof(recv_buf));
+			if((r=read(s, recv_buf, sizeof(recv_buf)-1) )>6){
+				for(int i = 0; i < r; i++) {
+					putchar(recv_buf[i]);
+				}
+				delay(10);
+			}
+        }
+    }
+}
 void app_main(){
+    ESP_ERROR_CHECK( nvs_flash_init() );
+//    initialise_wifi();
     xTaskCreate(big_doll, "big_doll",2048, NULL, 10, NULL);
+//    xTaskCreate(wifi_control, "wifi_control",4096, NULL, 10, NULL);
 }
 

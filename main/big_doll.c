@@ -52,8 +52,8 @@ doll doll_default_setting(){
 
 	d.mouth.angle=0;
 	d.mouth.change_time_ms=300;
-	d.mouth.channel=4;
-	d.mouth.channel_gpio=22;
+	d.mouth.channel=10;
+	d.mouth.channel_gpio=4;
 
 	return d;
 }
@@ -117,15 +117,15 @@ void eye_set(eye_d eye){
 		y=(eye.r)*sin(radians(eye.angle))*1.2+eye_center;
 	}
 	else{
-		x=eye.r*cos(radians(eye.angle))+1500;
-		y=(-eye.r)*sin(radians(eye.angle))*1.2+eye_center;
+		x=eye.r*cos(radians(eye.angle))+1350;
+		y=(-eye.r)*sin(radians(eye.angle))*1.2+eye_center-130;
 	}
 	ledcWrite(eye.channel_y,(int)(y*0.8192));
 	ledcWrite(eye.channel_x,(int)(x*0.8192));
 }
 
 void mouth_set(mouth_d m){
-	int duty = (servo_max-(32-m.angle) * 92 /9)* 0.8192;
+	int duty = (1610-m.angle*92 /9)* 0.8192;
 	ledcWrite(m.channel,duty);
 }
 
