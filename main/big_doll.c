@@ -50,18 +50,35 @@ doll doll_default_setting(){
 	d.r_bow.change_time_ms=300;
 	d.r_bow.rev=0;
 
-	d.mouth.angle=0;
-	d.mouth.change_time_ms=300;
-	d.mouth.channel=10;
-	d.mouth.channel_gpio=4;
+	d.c_mouth.angle=0;
+	d.c_mouth.change_time_ms=300;
+	d.c_mouth.channel=10;
+	d.c_mouth.channel_gpio=4;
+	d.c_mouth.side=0;
+	d.c_mouth.rev=0;
 
+	d.l_mouth.angle=0;
+	d.l_mouth.change_time_ms=300;
+	d.l_mouth.channel=11;
+	d.l_mouth.channel_gpio=16;
+	d.l_mouth.side=1;
+	d.l_mouth.rev=0;
+
+	d.r_mouth.angle=0;
+	d.r_mouth.change_time_ms=300;
+	d.r_mouth.channel=12;
+	d.r_mouth.channel_gpio=5;
+	d.r_mouth.side=1;
+	d.r_mouth.rev=1;
 	return d;
 }
 void doll_init(doll d)
 {
 	eye_init(d.l_eye);
 	eye_init(d.r_eye);
-	mouth_init(d.mouth);
+	mouth_init(d.c_mouth);
+	mouth_init(d.l_mouth);
+	mouth_init(d.r_mouth);
 	ear_init(d.l_ear);
 	ear_init(d.r_ear);
 	bow_init(d.r_bow);
@@ -69,7 +86,9 @@ void doll_init(doll d)
 
 	eye_set(d.l_eye);
 	eye_set(d.r_eye);
-	mouth_set(d.mouth);
+	mouth_set(d.c_mouth);
+	mouth_set(d.l_mouth);
+	mouth_set(d.r_mouth);
 	ear_set(d.l_ear);
 	ear_set(d.r_ear);
 	bow_set(d.r_bow);
@@ -78,7 +97,9 @@ void doll_init(doll d)
 void doll_set(doll d){
 	eye_set(d.l_eye);
 	eye_set(d.r_eye);
-	mouth_set(d.mouth);
+	mouth_set(d.c_mouth);
+	mouth_set(d.l_mouth);
+	mouth_set(d.r_mouth);
 	ear_set(d.l_ear);
 	ear_set(d.r_ear);
 	bow_set(d.r_bow);
@@ -113,11 +134,11 @@ void eye_set(eye_d eye){
 
 
 	if(eye.rev){
-		x=eye.r*cos(radians(eye.angle))+1300;
-		y=(eye.r)*sin(radians(eye.angle))*1.2+eye_center;
+		x=eye.r*cos(radians(eye.angle))+1350;
+		y=(eye.r)*sin(radians(eye.angle))*1.2+eye_center-50;
 	}
 	else{
-		x=eye.r*cos(radians(eye.angle))+1350;
+		x=eye.r*cos(radians(eye.angle))+1500;
 		y=(-eye.r)*sin(radians(eye.angle))*1.2+eye_center-130;
 	}
 	ledcWrite(eye.channel_y,(int)(y*0.8192));
@@ -125,8 +146,19 @@ void eye_set(eye_d eye){
 }
 
 void mouth_set(mouth_d m){
-	int duty = (1610-m.angle*92 /9)* 0.8192;
-	ledcWrite(m.channel,duty);
+	if(!m.side){
+		int duty = (1640-m.angle*92 /9)* 0.8192;
+		ledcWrite(m.channel,duty);
+	}
+	else{
+		if(m.rev){
+			int duty = (1400-m.angle*92 /9)* 0.8192;
+			ledcWrite(m.channel,duty);
+		}else{
+			int duty = (1520+m.angle*92 /9)* 0.8192;
+			ledcWrite(m.channel,duty);
+		}
+	}
 }
 
 //ear angle is from 0 to 20

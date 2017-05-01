@@ -46,7 +46,18 @@
 #define RXD2  21
 #define TXD2  22
 #define BUF_SIZE (1024)
-
+void smile(doll *d){
+	d->l_mouth.angle=30;
+	d->r_mouth.angle=30;
+}
+void cry(doll *d){
+	d->l_mouth.angle=-30;
+	d->r_mouth.angle=-30;
+}
+void normal_face(doll *d){
+	d->l_mouth.angle=0;
+	d->r_mouth.angle=0;
+}
 static void big_doll(){
 	doll d;
 	int l_bt,r_bt,l_x,l_y,r_x,r_y;
@@ -93,17 +104,18 @@ static void big_doll(){
 				d.l_bow.y=((double)l_y-512)/512*8-6;
 				d.r_bow.y=((double)l_y-512)/512*8-5;
 				d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
-				if(l_bt == 8){
-					d.l_ear.angle=40;
+				if( (l_bt>>3)%2){
+					d.l_ear.angle=30;
 				}
-				else if(l_bt==4){
-					d.l_ear.angle=25;
-				}
-				else if(l_bt==2){
-					d.l_ear.angle=10;
-				}
-				else if(l_bt==1){
+				else if(l_bt%2){
 					d.l_ear.angle=-10;
+				}
+
+				if( (l_bt>>2)%2 ){
+					d.c_mouth.angle=30;
+				}
+				else{
+					d.c_mouth.angle =0;
 				}
 				double eye_x=((double)r_x-511)/1.2;
 				double eye_y=((double)r_y-511)/1.2;
@@ -112,24 +124,21 @@ static void big_doll(){
 				d.l_eye.r  =d.r_eye.r= eye_r;
 				d.l_eye.angle =d.r_eye.angle = eye_angle;
 
-				if(r_bt == 8){
-					d.r_ear.angle=40;
+				if( (r_bt>>3)%2){
+					d.r_ear.angle=30;
 				}
-				else if(r_bt==4){
-					d.r_ear.angle=25;
-				}
-				else if(r_bt==2){
-					d.r_ear.angle=10;
-				}
-				else if(r_bt==1){
+				else if(r_bt%2 ){
 					d.r_ear.angle=-10;
 				}
 
-				if(r_bt>=16){
-					d.mouth.angle=30;
+				if( (r_bt>>2)%2){
+					smile(&d);
 				}
-				else{
-					d.mouth.angle=0;
+				else if( (r_bt>>1)%2){
+					cry(&d);
+				}
+				else if( (l_bt>>1)%2){
+					normal_face(&d);
 				}
 				doll_set(d);
 			}

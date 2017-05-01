@@ -83,6 +83,8 @@ typedef struct  mouth_data{
 	int change_time_ms;
 	double duty_add;
 	int loop_time;
+	int side;
+	int rev;
 
 }mouth_d;
 
@@ -93,7 +95,10 @@ typedef struct doll_data{
 	bow_d l_bow;
 	ear_d l_ear;
 	ear_d r_ear;
-	mouth_d mouth;
+	mouth_d l_mouth;
+	mouth_d r_mouth;
+	mouth_d c_mouth;
+
 }doll;
 
 doll doll_default_setting();
