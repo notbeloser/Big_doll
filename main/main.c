@@ -46,23 +46,22 @@
 #define RXD2  21
 #define TXD2  22
 #define BUF_SIZE (1024)
-void smile(doll *d){
-	d->l_mouth.angle=30;
-	d->r_mouth.angle=30;
+doll d;
+void smile(doll *r){
+	r->l_mouth.angle=30;
+	r->r_mouth.angle=30;
 }
-void cry(doll *d){
-	d->l_mouth.angle=-30;
-	d->r_mouth.angle=-30;
+void cry(doll *r){
+	r->l_mouth.angle=-30;
+	r->r_mouth.angle=-30;
 }
-void normal_face(doll *d){
-	d->l_mouth.angle=0;
-	d->r_mouth.angle=0;
+void normal_face(doll *r){
+	r->l_mouth.angle=0;
+	r->r_mouth.angle=0;
 }
 static void big_doll(){
-	doll d;
+
 	int l_bt,r_bt,l_x,l_y,r_x,r_y;
-	d=doll_default_setting();
-	doll_init(d);
     uart_config_t uart_config = {
         .baud_rate = 38400,
         .data_bits = UART_DATA_8_BITS,
@@ -101,14 +100,14 @@ static void big_doll(){
 
 			if( sscanf((char *)left_str,"%d,%d,%d\n",&l_bt,&l_x,&l_y) == 3 && sscanf((char *)right_str,"%d,%d,%d\n",&r_bt,&r_x,&r_y) == 3		){
 				printf("left=%d,%d,%d right=%d,%d,%d\n",l_bt,l_x,l_y,r_bt,r_x,r_y);
-				d.l_bow.y=((double)l_y-512)/512*8-6;
-				d.r_bow.y=((double)l_y-512)/512*8-5;
+				d.l_bow.y=((double)l_y-512)/512*11-10;
+				d.r_bow.y=((double)l_y-512)/512*11-9;
 				d.l_bow.angle=d.r_bow.angle=((double)l_x-512)/512*30;
 				if( (l_bt>>3)%2){
-					d.l_ear.angle=30;
+					d.l_ear.angle=43;
 				}
 				else if(l_bt%2){
-					d.l_ear.angle=-10;
+					d.l_ear.angle=-25;
 				}
 
 				if( (l_bt>>2)%2 ){
@@ -125,10 +124,10 @@ static void big_doll(){
 				d.l_eye.angle =d.r_eye.angle = eye_angle;
 
 				if( (r_bt>>3)%2){
-					d.r_ear.angle=30;
+					d.r_ear.angle=43;
 				}
 				else if(r_bt%2 ){
-					d.r_ear.angle=-10;
+					d.r_ear.angle=-25;
 				}
 
 				if( (r_bt>>2)%2){
@@ -193,7 +192,8 @@ static void initialise_wifi(void){
     ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
     ESP_ERROR_CHECK( esp_wifi_start() );
 }
-static void wifi_control(void *pvParameters){
+static void wifi_control(void *pvParameters)
+{
     const struct addrinfo hints = {
         .ai_family = AF_INET,
         .ai_socktype = SOCK_STREAM,
@@ -202,52 +202,86 @@ static void wifi_control(void *pvParameters){
     struct in_addr *addr;
     int s, r;
     char recv_buf[64];
+	char str[200];
 
-    while(1) {
-        xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,false, true, portMAX_DELAY);
-        ESP_LOGI(TAG, "Connected to AP");
-        int err = getaddrinfo("192.168.0.18",6000, &hints, &res);
-        if(err != 0 || res == NULL) {
-            ESP_LOGE(TAG, "DNS lookup failed err=%d res=%p", err, res);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-            continue;
-        }
-        addr = &((struct sockaddr_in *)res->ai_addr)->sin_addr;
-        ESP_LOGI(TAG, "DNS lookup succeeded. IP=%s", inet_ntoa(*addr));
+        /* Wait for the callback to set the CONNECTED_BIT in the
+           event group.
+        */
+	xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
+						false, true, portMAX_DELAY);
+	ESP_LOGI(TAG, "Connected to AP");
 
-        s = socket(res->ai_family, res->ai_socktype, 0);
-        if(s < 0) {
-            ESP_LOGE(TAG, "... Failed to allocate socket.");
-            freeaddrinfo(res);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-            continue;
-        }
-        ESP_LOGI(TAG, "... allocated socket\r\n");
+	int err = getaddrinfo("192.168.0.12", "6000", &hints, &res);
 
-        if(connect(s, res->ai_addr, res->ai_addrlen) != 0) {
-            ESP_LOGE(TAG, "... socket connect failed errno=%d", errno);
-            close(s);
-            freeaddrinfo(res);
-            vTaskDelay(4000 / portTICK_PERIOD_MS);
-            continue;
-        }
-        ESP_LOGI(TAG, "... connected");
-        freeaddrinfo(res);
-        while(1){
-			bzero(recv_buf, sizeof(recv_buf));
-			if((r=read(s, recv_buf, sizeof(recv_buf)-1) )>6){
-				for(int i = 0; i < r; i++) {
-					putchar(recv_buf[i]);
-				}
-				delay(10);
-			}
-        }
-    }
+	if(err != 0 || res == NULL) {
+		ESP_LOGE(TAG, "DNS lookup failed err=%d res=%p", err, res);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+		vTaskDelete(NULL);
+	}
+
+	/* Code to print the resolved IP.
+
+	   Note: inet_ntoa is non-reentrant, look at ipaddr_ntoa_r for "real" code */
+	addr = &((struct sockaddr_in *)res->ai_addr)->sin_addr;
+	ESP_LOGI(TAG, "DNS lookup succeeded. IP=%s", inet_ntoa(*addr));
+
+	s = socket(res->ai_family, res->ai_socktype, 0);
+	if(s < 0) {
+		ESP_LOGE(TAG, "... Failed to allocate socket.");
+		freeaddrinfo(res);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+		vTaskDelete(NULL);
+	}
+	ESP_LOGI(TAG, "... allocated socket\r\n");
+
+	if(connect(s, res->ai_addr, res->ai_addrlen) != 0) {
+		ESP_LOGE(TAG, "... socket connect failed errno=%d", errno);
+		close(s);
+		freeaddrinfo(res);
+		vTaskDelay(4000 / portTICK_PERIOD_MS);
+		vTaskDelete(NULL);
+	}
+
+	ESP_LOGI(TAG, "... connected");
+	freeaddrinfo(res);
+
+	if (write(s, "test", strlen("test")) < 0) {
+		ESP_LOGE(TAG, "... socket send failed");
+		close(s);
+		vTaskDelay(4000 / portTICK_PERIOD_MS);
+		vTaskDelete(NULL);
+	}
+	ESP_LOGI(TAG, "... socket send success");
+
+	/* Read HTTP response */
+	while(1){
+		bzero(recv_buf, sizeof(recv_buf));
+		r = read(s, recv_buf, sizeof(recv_buf)-1);
+		if(r){
+			sprintf(str," eye %f,%f,%f,%f\n ear %f,%f\n bow %f,%f,%f,%f\n mouth %f,%f,%f"
+					,d.l_eye.r,d.l_eye.angle,d.r_eye.r,d.r_eye.angle,
+					d.l_ear.angle,d.r_ear.angle,
+					d.l_bow.angle,d.l_bow.y,d.r_bow.angle,d.r_bow.y,
+					d.l_mouth.angle,d.c_mouth.angle,d.r_mouth.angle);
+			write(s,str,strlen(str));
+			memset(str,0,sizeof(str));
+		}
+		for(int i = 0; i < r; i++) {
+			putchar(recv_buf[i]);
+		}
+		printf("%d\n",r);
+		delay(100);
+	}
+
 }
+
+
 void app_main(){
     ESP_ERROR_CHECK( nvs_flash_init() );
-//    initialise_wifi();
+	d=doll_default_setting();
+	doll_init(d);
+	initialise_wifi();
     xTaskCreate(big_doll, "big_doll",2048, NULL, 10, NULL);
-//    xTaskCreate(wifi_control, "wifi_control",4096, NULL, 10, NULL);
+    xTaskCreate(wifi_control, "wifi_control",4096, NULL, 10, NULL);
 }
 
