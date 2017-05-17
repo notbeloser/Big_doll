@@ -147,7 +147,7 @@ void eye_set(eye_d eye){
 
 void mouth_set(mouth_d m){
 	if(!m.side){
-		int duty = (1700-m.angle*92 /9)* 0.8192;
+		int duty = (1600-m.angle*92 /9)* 0.8192;
 		ledcWrite(m.channel,duty);
 	}
 	else{

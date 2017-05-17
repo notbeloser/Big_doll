@@ -48,16 +48,16 @@
 #define BUF_SIZE (1024)
 doll d;
 void smile(doll *r){
-	r->l_mouth.angle=30;
-	r->r_mouth.angle=30;
+	r->l_mouth.angle=50;
+	r->r_mouth.angle=50;
 }
 void cry(doll *r){
-	r->l_mouth.angle=-30;
-	r->r_mouth.angle=-30;
-}
-void normal_face(doll *r){
 	r->l_mouth.angle=0;
 	r->r_mouth.angle=0;
+}
+void normal_face(doll *r){
+	r->l_mouth.angle=20;
+	r->r_mouth.angle=20;
 }
 static void big_doll(){
 
@@ -111,10 +111,10 @@ static void big_doll(){
 				}
 
 				if( (l_bt>>2)%2 ){
-					d.c_mouth.angle=30;
+					d.c_mouth.angle=0;
 				}
 				else{
-					d.c_mouth.angle =0;
+					d.c_mouth.angle =65;
 				}
 				double eye_x=((double)r_x-511)/1.2;
 				double eye_y=((double)r_y-511)/1.2;
