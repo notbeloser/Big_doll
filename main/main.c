@@ -59,7 +59,7 @@ void normal_face(doll *r){
 	r->l_mouth.angle=20;
 	r->r_mouth.angle=20;
 }
-static void big_doll(){
+static void hand_control(){
 
 	int l_bt,r_bt,l_x,l_y,r_x,r_y;
     uart_config_t uart_config = {
@@ -149,8 +149,8 @@ static void big_doll(){
     }
 }
 
-#define EXAMPLE_WIFI_SSID "27H7F"
-#define EXAMPLE_WIFI_PASS "0926980187"
+#define EXAMPLE_WIFI_SSID "notbeloser"
+#define EXAMPLE_WIFI_PASS "gogogogo"
 static EventGroupHandle_t wifi_event_group;
 const int CONNECTED_BIT = BIT0;
 static const char *TAG = "example";
@@ -192,6 +192,54 @@ static void initialise_wifi(void){
     ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
     ESP_ERROR_CHECK( esp_wifi_start() );
 }
+
+#define l_ear_angle 0
+#define r_ear_angle 1
+#define l_bow_y 2
+#define l_bow_angle 3
+#define r_bow_y	4
+#define r_bow_angle 5
+#define l_eye_x	6
+#define l_eye_y	7
+#define r_eye_x	8
+#define r_eye_y	9
+#define l_mouth_angle 10
+#define r_mouth_angle 11
+#define c_mouth_angle 12
+void doll_set_by_big_console(int d_num[13]){
+	d.l_ear.angle = ((double)d_num[l_ear_angle]-512)/1024*68 - 34;
+	d.r_ear.angle = ((double)d_num[r_ear_angle]-512)/1024*68 - 34;
+
+	d.l_bow.y=((double)d_num[l_bow_y]-512)/512*11-10;
+	d.r_bow.y=((double)d_num[r_bow_y]-512)/512*11-9;
+	d.l_bow.angle=((double)d_num[l_bow_angle]-512)/512*30;
+	d.r_bow.angle=((double)d_num[r_bow_angle]-512)/512*30;
+
+	double eye_x=((double)d_num[l_eye_x]-511)/1.2;
+	double eye_y=((double)d_num[l_eye_y]-511)/1.2;
+	double eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
+	double eye_angle=degrees(atan2(eye_y,eye_x));
+	d.l_eye.r = eye_r;
+	d.l_eye.angle= eye_angle;
+
+	eye_x=((double)d_num[r_eye_x]-511)/1.2;
+	eye_y=((double)d_num[r_eye_y]-511)/1.2;
+	eye_r = sqrt(pow(eye_x,2) + pow(eye_y,2) );
+	eye_angle=degrees(atan2(eye_y,eye_x));
+	d.r_eye.r = eye_r;
+	d.r_eye.angle= eye_angle;
+
+	d.l_mouth.angle=((double)d_num[l_mouth_angle])*50/1024;
+	d.r_mouth.angle=((double)d_num[r_mouth_angle])*50/1024;
+	if( d_num[c_mouth_angle]==1)
+		d.c_mouth.angle=0;
+	else
+		d.c_mouth.angle =65;
+
+
+	doll_set(d);
+}
+
 static void wifi_control(void *pvParameters)
 {
     const struct addrinfo hints = {
@@ -201,8 +249,7 @@ static void wifi_control(void *pvParameters)
     struct addrinfo *res;
     struct in_addr *addr;
     int s, r;
-    char recv_buf[64];
-	char str[200];
+    char recv_buf[70];
 
         /* Wait for the callback to set the CONNECTED_BIT in the
            event group.
@@ -211,7 +258,7 @@ static void wifi_control(void *pvParameters)
 						false, true, portMAX_DELAY);
 	ESP_LOGI(TAG, "Connected to AP");
 
-	int err = getaddrinfo("192.168.0.12", "6000", &hints, &res);
+	int err = getaddrinfo("192.168.43.171", "6000", &hints, &res);
 
 	if(err != 0 || res == NULL) {
 		ESP_LOGE(TAG, "DNS lookup failed err=%d res=%p", err, res);
@@ -258,19 +305,13 @@ static void wifi_control(void *pvParameters)
 		bzero(recv_buf, sizeof(recv_buf));
 		r = read(s, recv_buf, sizeof(recv_buf)-1);
 		if(r){
-			sprintf(str," eye %f,%f,%f,%f\n ear %f,%f\n bow %f,%f,%f,%f\n mouth %f,%f,%f"
-					,d.l_eye.r,d.l_eye.angle,d.r_eye.r,d.r_eye.angle,
-					d.l_ear.angle,d.r_ear.angle,
-					d.l_bow.angle,d.l_bow.y,d.r_bow.angle,d.r_bow.y,
-					d.l_mouth.angle,d.c_mouth.angle,d.r_mouth.angle);
-			write(s,str,strlen(str));
-			memset(str,0,sizeof(str));
+			int d[13],num_read;
+			num_read=sscanf(recv_buf,"%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",
+					&d[0],&d[1],&d[2],&d[3],&d[4],&d[5],&d[6],&d[7],&d[8],&d[9],&d[10],&d[11],&d[12]);
+			printf("%s",recv_buf);
+			if(num_read == 13)
+				doll_set_by_big_console(d);
 		}
-		for(int i = 0; i < r; i++) {
-			putchar(recv_buf[i]);
-		}
-		printf("%d\n",r);
-		delay(100);
 	}
 
 }
@@ -281,7 +322,8 @@ void app_main(){
 	d=doll_default_setting();
 	doll_init(d);
 	initialise_wifi();
-    xTaskCreate(big_doll, "big_doll",2048, NULL, 10, NULL);
-    xTaskCreate(wifi_control, "wifi_control",4096, NULL, 10, NULL);
+    //xTaskCreate(hand_control, "hand_control",2048, NULL, 10, NULL);
+//    xTaskCreate(wifi_control, "wifi_control",4096, NULL, 10, NULL);
+	wifi_control();
 }
 

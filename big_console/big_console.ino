@@ -22,106 +22,128 @@
 //const int svr[5]={A0,A1,A12,A13,A14};
 int led[4];
 int a;
-long int t,kb_t;
+long int t, kb_t;
 char c[200];
 char s[200];
-int c_index=0;
-int l1,l2,l3,l4;
-void key_scan(int l[4]){
+int c_index = 0;
+int l1, l2, l3, l4;
+char bit_rev(char b,int bit){
+  char a=0;
+  for(int i=0;i<bit;i++){
+    a|=((_BV(i)&b)>>i)<<(bit-1-i);
+  }
+  return a;
+}
+void key_scan(int l[4]) {
 
   static int i;
   static unsigned int num[4];
 
-  num[0]=num[0]|(~(PINA>>4)&15)<<(4*i);
-  num[2]=num[2]|((~PINL)&15)<<(4*i);
-  
-  if(i<3){
-    DDRJ= _BV(6-i)|15;//keyboard 1
-    PORTJ=((~_BV(6-i))&0xF0)|(PORTJ& 0xF);
-    
-    DDRB= _BV(i+5);//keyboard 3
-    PORTB=(~_BV(i+5))&0xF0;
-    
-    PORTA=(PORTA&0xF0)|((l[0]>>((i+1)*4))&0xF);//LED 0
-    PORTJ= (PORTJ&0xF0) | (l[1]>>((i+1)*4))&0xF;//LED 1
-    PORTL= PORTL&0xF | (((l[2]>>((i+1)*4))&0xF)<<4);//LED 2
-    PORTG = (PORTG & B11100001) | (((l[3]>>((i+1)*4))&0xF)<<1);//LED 3
+  num[1] = num[1] | (~(PINA >> 4) & 15) << (4 * i);
+  num[0] = num[0] | ((~bit_rev(PINC >> 4,4))& 15) << (4 * i);
+  num[2] = num[2] | ((~PINL) & 15) << (4 * i);
+  num[3] = num[3] | ((~(PIND >> 4)) & 15) << (4 * i);
+
+  if (i < 3) {
+    DDRJ = _BV(6 - i) | 15; //keyboard 1
+    PORTJ = ((~_BV(6 - i)) & 0xF0) | (PORTJ & 0xF);
+
+    DDRC = _BV(2 - i); //keyboard 2
+    PORTC = ~_BV(2 - i);
+
+    DDRB = _BV(i + 5); //keyboard 3
+    PORTB = (~_BV(i + 5)) & 0xF0;
+
+    DDRD = _BV(i + 1); //keyboard 4
+    PORTD = ~_BV(i + 1);
+
+    PORTA = (PORTA & 0xF0) | ((l[1] >> ((i + 1) * 4)) & 0xF); //LED 0
+    PORTJ = (PORTJ & 0xF0) | ((l[0] >> ((i + 1) * 4)) & 0xF); //LED 1
+    PORTL = PORTL & 0xF | (((l[2] >> ((i + 1) * 4)) & 0xF) << 4); //LED 2
+    PORTG = (PORTG & B11000011) | (((l[3] >> ((i + 1) * 4)) & 0xF) << 2); //LED 3
     i++;
   }
-  else{
-    DDRJ= _BV(7)|15;//keyboard 1
-    PORTJ=((~_BV(7))&0xF0)|(PORTJ& 0xF);
-    
-    DDRB= _BV(4);//keyboard 3
-    PORTB=(~_BV(4))&0xF0;
-    
-    PORTA=(PORTA&0xF0)|(l[0]&0xF);//LED 0
-    PORTJ= (PORTJ&0xF0) | l[1]&0xF;//LED 1
-    PORTL= PORTL&0xF | ((l[2]&0xF)<<4);//LED 2
-    PORTG = (PORTG & B11100001) | ((l[3]&0xF)<<1);//LED 3
-    i=0;
-    sprintf(s,"keyboard %X,%X,%X,%X ",num[0],num[1],num[2],num[3]);
-    memset(num,0,sizeof(num));
+  else {
+    DDRJ = _BV(7) | 15; //keyboard 1
+    PORTJ = ((~_BV(7)) & 0xF0) | (PORTJ & 0xF);
+
+    DDRC = _BV(3);//keyboard 2
+    PORTC = ~_BV(3);
+
+    DDRB = _BV(4); //keyboard 3
+    PORTB = (~_BV(4)) & 0xF0;
+
+    DDRD = _BV(0); //keyboard 4
+    PORTD = ~_BV(0);
+
+    PORTA = (PORTA & 0xF0) | (l[1] & 0xF); //LED 0
+    PORTJ = (PORTJ & 0xF0)  | (l[0] & 0xF); //LED 1
+    PORTL = PORTL & 0xF | ((l[2] & 0xF) << 4); //LED 2
+    PORTG = (PORTG & B11000011) | (bit_rev(l[3]& 0xF,4)<< 2); //LED 3
+    i = 0;
+    sprintf(s, "keyboard %X,%X,%X,%X ", num[0], num[1], num[2], num[3]);
+    memset(num, 0, sizeof(num));
   }
-  
-  
+
+
 }
 
 
 void setup() {
-	PORTE|=	B11111100; //J_BT INPUT_PULLUP
+  PORTE |=	B11111100; //J_BT INPUT_PULLUP
 
-	DDRJ |= B11110000; // K1 IO setting with led  
-  DDRA |= B00001111;
+  DDRJ =  B11111111; // K1 IO setting with led
+  DDRA  = B00001111;
   PORTA = B11110000;
-  
+
   DDRC  = B00001111;// K2 IO setting with led
-  DDRJ |= B00001111; 
+  DDRJ |= B00001111;
   PORTC = B11110000;
 
-  DDRB|=  B11110000;// K3 
-  PORTL=  B00001111;
-  DDRL=   B11110000;
+  DDRB |=  B11110000; // K3
+  PORTL =  B00001111;
+  DDRL =   B11110000;
 
-  DDRD=   B00001111;// K4
-  PORTD=  B11110000;
-  DDRG |= B00011110;
+  DDRD =   B00001111; // K4
+  PORTD =  B11110000;
+  DDRG |= B00111100;
 
   TIMSK1 = _BV(TOIE1);
-	Serial.begin(115200);
+  Serial.begin(115200);
 }
 void loop() {
-  
-  while(Serial.available()){
-    c[c_index]=Serial.read();
+
+  while (Serial.available()) {
+    c[c_index] = Serial.read();
     c_index++;
     delayMicroseconds(500);
   }
-  if(c_index){
-    sscanf(c,"%x,%x,%x,%x\n",&l1,&l2,&l3,&l4);
-    sprintf(c,"");
-    led[0]=l1;
-    led[1]=l2;
-    led[2]=l3;
-    led[3]=l4;
-    c_index=0;
+  if (c_index) {
+    sscanf(c, "%x,%x,%x,%x\n", &l1, &l2, &l3, &l4);
+    sprintf(c, "");
+    led[0] = l1;
+    led[1] = l2;
+    led[2] = l3;
+    led[3] = l4;
+    c_index = 0;
   }
 
-  if(millis()-t>50){
-    sprintf(c,"LED %x %x %x %x ",led[0],led[1],led[2],led[3]);
+  if (millis() - t > 50) {
+    sprintf(c, "LED %x %x %x %x ", led[0], led[1], led[2], led[3]);
     Serial.print(c);
     Serial.print(s);//keyboard
-    sprintf(c,"svr %d,%d,%d,%d,%d ",analogRead(A0),analogRead(A1),analogRead(A12),analogRead(A13),analogRead(A14));
+    sprintf(c, "svr %d,%d,%d,%d,%d ", analogRead(A0), analogRead(A1), analogRead(A12), analogRead(A13), analogRead(A14));
     Serial.print(c);
-    sprintf(c,"JD1 %d,%d JD2 %d,%d JD3 %d,%d JD4 %d,%d JD5 %d,%d ",
-      analogRead(A2),analogRead(A3),analogRead(A4),analogRead(A5),analogRead(A6),analogRead(A7),analogRead(A8),analogRead(A9),analogRead(A10),analogRead(A11));  
+    sprintf(c, "JD1 %d,%d JD2 %d,%d JD3 %d,%d JD4 %d,%d JD5 %d,%d ",
+            analogRead(A2), analogRead(A3), analogRead(A4), analogRead(A5), analogRead(A6), analogRead(A7), analogRead(A8), analogRead(A9), analogRead(A10), analogRead(A11));
     Serial.print(c);
-    sprintf(c,"BT %x\n",(~(PINE>>2))&B111111);
+    sprintf(c, "BT %x\n", (~(PINE >> 2))&B111111);
     Serial.print(c);
-    t=millis();
+    t = millis();
   }
 }
-ISR(TIMER1_OVF_vect){
+ISR(TIMER1_OVF_vect) {
   key_scan(led);
 }
+
 
